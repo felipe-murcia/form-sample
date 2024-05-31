@@ -1,0 +1,19 @@
+
+.container-form{
+  margin: 10px auto;
+  width: 80%;
+  background: white;
+  text-align: left;
+}
+
+.titleBox{
+    font-weight: 600;
+    margin-bottom: 0px; 
+    color: #15191d;
+    font-size: 27px;
+}
+
+.description{
+    color: #303841;
+    font-size: 14px;
+}

@@ -1,0 +1,6 @@
+.basecard{ 
+    background-color:red;
+    width: 100vh;
+    display: flex;
+    flex-direction: row;
+}
