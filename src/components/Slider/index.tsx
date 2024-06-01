@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import './index.css'; 
 import backgroundImage1 from '../../assets/images/2151205456.jpg'
 import backgroundImage2 from '../../assets/images/2342455138.jpg'
@@ -38,17 +38,22 @@ export const Silder = ({ }: Props) => {
 
     const [ index, setIndex ] = useState(0);
 
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
+        }, 3000); // Cambia la imagen cada 3 segundos
+    
+        // Limpia el intervalo cuando el componente se desmonta
+        return () => clearInterval(intervalId);
+      }, [sliderData.length]);
+
     const next = () => {
         setIndex( i => i + 1) 
     }
 
     const previous = () => {
         setIndex( i => i - 1)
-    }
-
-    const restart = () => {
-        setIndex(0)
-    }
+    } 
 
     return(
         <>

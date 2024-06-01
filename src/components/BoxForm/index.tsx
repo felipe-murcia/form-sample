@@ -28,7 +28,7 @@ export const BoxForm = ({ }: Props) => {
     formControl.addRule('fullname', validator.pattern(/^[a-zA-Z]+$/, 'El campo solo debe contener letras'));
     formControl.addRule('email', validator.required('El correo electrónico es requerido'));
     formControl.addRule('email', validator.email('El correo electrónico no es válido'));
-    formControl.addRule('phone', validator.required('El correo electrónico no es válido'));
+    formControl.addRule('phone', validator.required('El telefono es requerido'));
     formControl.addRule('phone', validator.maxLength(10, 'El telefono  no debe exceder los 10 digitos'));
     formControl.addRule('phone', validator.minLength(10, 'El telefono debe tener 10 digitos'));
       
@@ -38,6 +38,7 @@ export const BoxForm = ({ }: Props) => {
         const validationErrors = formControl.validate(userData);
         if (Object.keys(validationErrors).length === 0) {
           console.log('Formulario válido', userData);
+          setToken('success')
           setErrors({})
         } else {
           setErrors(validationErrors);
@@ -52,7 +53,7 @@ export const BoxForm = ({ }: Props) => {
             
             <h1 className='titleBox'>Get Started with Logoipsum</h1> 
             <p onClick={()=>setToken('testststs')} className='description'>
-                Manage peopleeasly staring from now {userData?.fullname} 
+                Manage peopleeasly staring from now  
             </p>
 
             <br/>
