@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Form basic and Slider
 
 Proyecto desarrollado en React que incluye un formulario sencillo con validaciones propias, sin utilizar bibliotecas adicionales. Además, cuenta con la integración de un slider automático que cambia cada 3 segundos. Las variables globales se gestionan mediante la API de Context.
 
