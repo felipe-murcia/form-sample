@@ -18,4 +18,4 @@ You will also see any lint errors in the console.
 
 ## Learn More
 
-You can check in demo [Demo app](https://form-slider-hcvvuynq0-felipe-murcias-projects.vercel.app/).
+You can check in demo [Demo app](https://form-slider.vercel.app/).
